@@ -3,8 +3,8 @@ import React from "react";
 function Banner(props) {
   return (
     <div className="container">
-      <h1 className="text-black-main font-extrabold tracking-tight text-5xl leading-3 mb-10">
-        <span className="text-white-span">Coffee </span>
+      <h1 className=" font-extrabold tracking-tight text-5xl  mb-10">
+        <span className="text-white-span ">Coffee </span>
         <span className="text-purple-main block xl:inline">Connoisseur</span>
       </h1>
       <p className="mt-3 text-2xl text-white-main">
