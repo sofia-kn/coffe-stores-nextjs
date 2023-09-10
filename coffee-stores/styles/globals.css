@@ -23,4 +23,22 @@ a {
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre{
+  margin: 0;
+}
+
+button{
+  background-color: transparent;
+  background-image: none;
+  font-weight: 600;
+}
+
 

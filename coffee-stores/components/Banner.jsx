@@ -2,7 +2,7 @@ import React from "react";
 
 function Banner(props) {
   return (
-    <div className="container">
+    <div>
       <h1 className=" font-extrabold tracking-tight text-5xl  mb-10">
         <span className="text-white-span ">Coffee </span>
         <span className="text-purple-main block xl:inline">Connoisseur</span>
@@ -21,6 +21,7 @@ function Banner(props) {
         pl-10
         text-lg 
         hover:bg-purple-main
+       
          "
           onClick={props.handleOnClick}
         >
