@@ -2,7 +2,7 @@ import React from "react";
 
 function Banner(props) {
   return (
-    <div>
+    <div className="mb-24 z-10 relative" >
       <h1 className=" font-extrabold tracking-tight text-5xl  mb-10">
         <span className="text-white-span ">Coffee </span>
         <span className="text-purple-main block xl:inline">Connoisseur</span>

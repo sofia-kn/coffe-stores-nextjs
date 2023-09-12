@@ -21,12 +21,13 @@ export default function Home() {
           buttonText="View stores nearby"
           handleOnClick={handleOnBannerBtnClick}
         />
-        <div className="absolute top-0 z-10 md:right-1/4">
+        <div className="absolute top-0 md:right-1/4">
           <Image
             src="/static/hero-image.png"
             width={700}
             height={400}
             alt="image"
+            
           />
         </div>
         <Card
