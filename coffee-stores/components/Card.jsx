@@ -4,7 +4,7 @@ import Image from "next/image";
 function Card(props) {
   return (
     <Link href={props.href}>
-      <div className=" bg-purple-main pt-1 pb-1 pl-4 pr-4 inline-block ">
+      <div className=" bg-purple-main pt-1 pb-1 pl-4 pr-4 inline-block glass">
         <div className="headerW mt-3 mb-3">
           <h2
             className="
