@@ -32,11 +32,11 @@ export function getStaticPaths() {
 }
 
 function coffeeStore(props) {
-  const Router = useRouter();
+  // const Router = useRouter();
 
-  if (Router.isFallback) {
-    return <div>Loadding ...</div>;
-  }
+  // if (Router.isFallback) {
+  //   return <div>Loadding ...</div>;
+  // }
 
   const { address, name, neighbourhood, imgUrl } = props.coffeeStore;
 
