@@ -18,12 +18,13 @@ function Card(props) {
             {props.name}
           </h2>
         </div>
-        <div className=" text-white-main">
+        <div >
           <Image
             className="rounded-xl"
-            src={props.imgUrl}
+            src={`${props.imgUrl}`}
             width={260}
             height={160}
+            alt='image'
           />
         </div>
       </div>

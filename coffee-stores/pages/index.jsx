@@ -2,9 +2,18 @@ import Head from "next/head";
 import Image from "next/image";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
+import coffeeStoresData from "../data/coffee-stores.json";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export async function getStaticProps(context) {
+  
+  return {
+    props: { coffeeStores : coffeeStoresData },
+  };
+}
+
+export default function Home(props) {
+ 
   const handleOnBannerBtnClick = () => {
     console.log("btn click");
   };
@@ -27,15 +36,24 @@ export default function Home() {
             width={700}
             height={400}
             alt="image"
-            
           />
         </div>
-        <Card
-          name="DarkHorse Coffee"
-          imgUrl="/static/hero-image.png"
-          href="/coffee-store/darkhorse-coffee"
-        />
-      </main>
-    </div>
-  );
-}
+        { props.coffeeStores.length > 0 && (
+          <>
+          <h2 className="text-4xl pb-8 mt-8 text-white-main">Toronto stores</h2>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {props.coffeeStores.map((coffeeStore) => (
+            <Card
+              key={coffeeStore.id}
+              className="justify-center"
+              name={coffeeStore.name}
+              imgUrl={`${coffeeStore.imgUrl}`}
+              href={`/coffee-store/${coffeeStore.id}`}
+            />
+          ))}
+        </div>
+    </>
+    )}
+  </main>
+</div>
+  )}
