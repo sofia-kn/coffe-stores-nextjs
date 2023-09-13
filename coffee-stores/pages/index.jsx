@@ -47,7 +47,7 @@ export default function Home(props) {
               key={coffeeStore.id}
               className="justify-center"
               name={coffeeStore.name}
-              imgUrl={`${coffeeStore.imgUrl}`}
+              imgUrl={coffeeStore.imgUrl}
               href={`/coffee-store/${coffeeStore.id}`}
             />
           ))}
