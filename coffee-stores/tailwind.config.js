@@ -12,6 +12,7 @@ module.exports = {
       "black-main": "rgba(17, 24, 39, 1)",
       "white-main": "rgba(229, 231, 235, 1)",
       "white-span": "rgba(249, 250, 251, 1)",
+      "dark-text": "rgba(55, 59, 100, 1)",
     },
 
     // extend: {},

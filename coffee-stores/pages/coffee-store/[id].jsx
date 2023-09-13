@@ -39,46 +39,53 @@ function coffeeStore(props) {
 
   const { address, name, neighbourhood, imgUrl } = props.coffeeStore;
 
- const handleUpvoteButton =()=>{
-  console.log('handle up vote');
- }
+  const handleUpvoteButton = () => {
+    console.log("handle up vote");
+  };
 
   return (
-    <div className="layout">
+    <div className="sm:pl-4 sm:pr-4 lg:pl-10 lg:pr-10 h-full">
       <Head>
         <title>{name}</title>
       </Head>
-      <div className="container">
-        <div className="col1">
-          <div className="backtohomeLink">
+      <div className="grid pt-7 pb-7 pl-7 pr-3 sm:w-full  lg:grid-cols-2">
+        <div className=" place-self-center">
+          <div className=" mt-24 text-lg mb-2 font-bold">
             <Link href="/">Back to home</Link>
           </div>
-          <div className="nameWrapper">
-          <h1 className="name ">{name}</h1>
+          <div className=" mb-4 mt-4">
+            <h1 className=" text-white-main text-4xl whitespace-normal overflow-hidden text-ellipsis">
+              {name}
+            </h1>
           </div>
-          <Image
-            src={imgUrl}
-            width={600}
-            height={360}
-            className="storeImg"
-            alt={name}
-          ></Image>
+          <div className="pt-4 pb-4">
+            <Image
+              src={imgUrl}
+              width={600}
+              height={360}
+              className=" shadow-2xl rounded-xl max-w-full h-auto border-none align-middle"
+              alt={name}
+            ></Image>
+          </div>
         </div>
-        <div className="col2 glass">
-          <div className="iconWrapper">
-            <Image src='/static/icons/places.svg' width='24' height='24'/>
-          <p className="text">{address}</p>
+        <div className="col2 glass rounded-2xl p-4 flex flex-col ml-2 self-center mt-16 text-dark-text lg:w-3/4">
+          <div className="iconWrapper  flex mb-4">
+            <Image src="/static/icons/places.svg" width="24" height="24" />
+            <p className="pl-2 text-2xl m-0 font-bold">{address}</p>
           </div>
-          <div className="iconWrapper">
-            <Image src='/static/icons/nearMe.svg' width='24' height='24'/>
-          <p className="text">{neighbourhood}</p>
+          <div className="iconWrapper  flex mb-4">
+            <Image src="/static/icons/nearMe.svg" width="24" height="24" />
+            <p className="pl-2 text-2xl m-0 font-bold">{neighbourhood}</p>
           </div>
-          <div className="iconWrapper">
-            <Image src='/static/icons/star.svg' width='24' height='24'/>
-          <p className="text">1</p>
+          <div className="iconWrapper  flex mb-4">
+            <Image src="/static/icons/star.svg" width="24" height="24" />
+            <p className="pl-2 text-2xl m-0 font-bold">1</p>
           </div>
 
-          <button className="upvoteBtn" onClick={handleUpvoteButton}> Up vote</button>
+          <button className="upvoteBtn w-fit text-white-main  mt-4 mb-4 p-2 bg-purple-dark outline-0 text-base hover:bg-purple-main" onClick={handleUpvoteButton}>
+            {" "}
+            Up vote
+          </button>
         </div>
       </div>
     </div>
