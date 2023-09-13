@@ -3,6 +3,7 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import coffeeStoresData from "../../data/coffee-stores.json";
+import CoffeeInfo from "../../components/CoffeeInfo";
 
 export function getStaticProps(staticProps) {
   console.log(staticProps);
@@ -69,23 +70,14 @@ function coffeeStore(props) {
           </div>
         </div>
         <div className="col2 glass rounded-2xl p-4 flex flex-col ml-2 self-center mt-16 text-dark-text lg:w-3/4">
-          <div className="iconWrapper  flex mb-4">
-            <Image src="/static/icons/places.svg" width="24" height="24" />
-            <p className="pl-2 text-2xl m-0 font-bold">{address}</p>
-          </div>
-          <div className="iconWrapper  flex mb-4">
-            <Image src="/static/icons/nearMe.svg" width="24" height="24" />
-            <p className="pl-2 text-2xl m-0 font-bold">{neighbourhood}</p>
-          </div>
-          <div className="iconWrapper  flex mb-4">
-            <Image src="/static/icons/star.svg" width="24" height="24" />
-            <p className="pl-2 text-2xl m-0 font-bold">1</p>
-          </div>
+          <CoffeeInfo address={address} neighbourhood={neighbourhood}/>
+          
 
           <button className="upvoteBtn w-fit text-white-main  mt-4 mb-4 p-2 bg-purple-dark outline-0 text-base hover:bg-purple-main" onClick={handleUpvoteButton}>
             {" "}
             Up vote
           </button>
+        
         </div>
       </div>
     </div>
