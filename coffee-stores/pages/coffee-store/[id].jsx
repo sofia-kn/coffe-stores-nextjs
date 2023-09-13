@@ -45,11 +45,11 @@ function coffeeStore(props) {
   };
 
   return (
-    <div className="sm:pl-4 sm:pr-4 lg:pl-10 lg:pr-10 h-full">
+    <div className="sm:pl-4 sm:pr-4  lg:pl-10 lg:pr-10 h-full">
       <Head>
         <title>{name}</title>
       </Head>
-      <div className="grid pt-7 pb-7 pl-7 pr-3 sm:w-full  lg:grid-cols-2">
+      <div className="grid p-7 sm:w-full  lg:grid-cols-2">
         <div className=" place-self-center">
           <div className=" mt-24 text-lg mb-2 font-bold">
             <Link href="/">Back to home</Link>
