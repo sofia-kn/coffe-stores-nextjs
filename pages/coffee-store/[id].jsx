@@ -38,7 +38,6 @@ function coffeeStore(props) {
   //   return <div>Loadding ...</div>;
   // }
 
-  const { name, neighbourhood, imgUrl } = props.coffeeStore;
 
   const handleUpvoteButton = () => {
     console.log("handle up vote");
@@ -47,7 +46,7 @@ function coffeeStore(props) {
   return (
     <div className="sm:pl-4 sm:pr-4  lg:pl-10 lg:pr-10 h-full">
       <Head>
-        <title>{name}</title>
+        <title>{props.name}</title>
       </Head>
       <div className="grid p-7 sm:w-full  lg:grid-cols-2">
         <div className=" place-self-center">
@@ -56,21 +55,21 @@ function coffeeStore(props) {
           </div>
           <div className=" mb-4 mt-4">
             <h1 className=" text-white-main text-4xl whitespace-normal overflow-hidden text-ellipsis">
-              {name}
+              {props.name}
             </h1>
           </div>
           <div className="pt-4 pb-4">
             <Image
-              src={imgUrl}
+              src={props.imgUrl}
               width={600}
               height={360}
               className=" shadow-2xl rounded-xl max-w-full h-auto border-none align-middle"
-              alt={name}
+              alt={props.name}
             ></Image>
           </div>
         </div>
         <div className="col2 glass rounded-2xl p-4 flex flex-col ml-2 self-center mt-16 text-dark-text lg:w-3/4">
-          <CoffeeInfo address={props.address} neighbourhood={neighbourhood}/>
+          <CoffeeInfo address={props.address} neighbourhood={props.neighbourhood}/>
           
 
           <button className="upvoteBtn w-fit text-white-main  mt-4 mb-4 p-2 bg-purple-dark outline-0 text-base hover:bg-purple-main" onClick={handleUpvoteButton}>
