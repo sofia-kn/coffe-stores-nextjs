@@ -5,21 +5,21 @@
     "id": 1,
     "name": "Dark Horse Coffee",
     "imgUrl": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1000w,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg",
-    "address": "401 Richmond St W",
+    "address": "40 Richmond St W",
     "neighbourhood": "Richmond and Spadina"
   },
   {
     "id": 2,
     "name": "Route 300",
     "imgUrl": "https://www.health.com/thmb/FXuIRYC5THBEHB0ICA6ySTDje8o=/2000x0/filters:no_upscale():max_bytes(150000):strip_icc()/cooffees-nathan-dumlao-6VhPY27jdps-unsplash-2000-7ab18521a3964bbba4a0832e8aa4014f.jpg",
-    "address": "401 Richmond St W",
+    "address": "402 Richmond St W",
     "neighbourhood": "Route 300 Neighbourhood"
   },
   {
     "id": 3,
-    "name": "Route 300",
+    "name": "late",
     "imgUrl": "https://secretauckland.com/wp-content/uploads/2022/02/Megan-SG-article-cover-2022-10-17T154817.470-1024x683.png",
-    "address": "401 Richmond St W",
+    "address": "403 Richmond St W",
     "neighbourhood": "Route 300 Neighbourhood"
   }
 ]
