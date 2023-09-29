@@ -38,7 +38,7 @@ function coffeeStore(props) {
   //   return <div>Loadding ...</div>;
   // }
 
-  const { address, name, neighbourhood, imgUrl } = props.coffeeStore;
+  const { name, neighbourhood, imgUrl } = props.coffeeStore;
 
   const handleUpvoteButton = () => {
     console.log("handle up vote");
@@ -70,7 +70,7 @@ function coffeeStore(props) {
           </div>
         </div>
         <div className="col2 glass rounded-2xl p-4 flex flex-col ml-2 self-center mt-16 text-dark-text lg:w-3/4">
-          <CoffeeInfo address={address} neighbourhood={neighbourhood}/>
+          <CoffeeInfo address={props.address} neighbourhood={neighbourhood}/>
           
 
           <button className="upvoteBtn w-fit text-white-main  mt-4 mb-4 p-2 bg-purple-dark outline-0 text-base hover:bg-purple-main" onClick={handleUpvoteButton}>
