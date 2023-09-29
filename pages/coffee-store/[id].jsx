@@ -38,6 +38,8 @@ function coffeeStore(props) {
   //   return <div>Loadding ...</div>;
   // }
 
+  const {imgUrl} = props.coffeeStore
+
 
   const handleUpvoteButton = () => {
     console.log("handle up vote");
@@ -45,6 +47,7 @@ function coffeeStore(props) {
 
   return (
     <div className="sm:pl-4 sm:pr-4  lg:pl-10 lg:pr-10 h-full">
+      {console.log(imgUrl)}
       <Head>
         <title>{props.name}</title>
       </Head>
@@ -60,7 +63,7 @@ function coffeeStore(props) {
           </div>
           <div className="pt-4 pb-4">
             <Image
-              src={props.imgUrl}
+              src={imgUrl}
               width={600}
               height={360}
               className=" shadow-2xl rounded-xl max-w-full h-auto border-none align-middle"
